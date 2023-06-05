@@ -1,0 +1,118 @@
+
+/*open-carrito*/
+
+#open-carrito{
+    background-color: #ffffff;
+    width: 450px ;
+    height: 100vh;
+    position:fixed;
+    z-index: 100;
+    display: none;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: space-around;
+   
+}
+
+.open-car{
+    display: flex;
+    justify-content: end;
+
+}
+
+#open-carrito h1{
+    font-family: 'Playfair Display';
+    font-size: 20px;
+    color: #AC8075;
+    margin: 20px;
+}
+
+#open-carrito hr{
+    width: 88%;
+    margin: 0 auto;
+}
+
+.bi-x{
+    color:#AC8075;
+    font-size: 40px;
+}
+
+#cerrar{
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    margin: 0;
+    color: white;
+    margin-top: 2px;
+}
+
+.row{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+
+}
+
+.row img{
+    width: 380px;
+    height: 350px;
+    object-fit: cover;
+}
+
+.card{
+    align-items: center;
+    border: none;
+}
+
+.card-body h5{
+    display: flex;
+    justify-content: center;
+    color: #8F6D65;
+    font-family: 'Inter', sans-serif;
+    margin-bottom: 3px
+}
+
+.card-body p{
+    display: flex;
+    font-family: 'Inter', sans-serif;
+    font-weight: lighter;
+    justify-content: center;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+
+
+.bi-plus-circle, .bi-dash-circle{
+    color: #AC8075;
+    cursor: pointer;
+    font-size: 20px;
+}
+
+
+.btn-danger{
+    background-color: #dc3545;
+}
+
+.carritovacio{
+    width: fit-content;
+    margin: 20px auto;
+}
+
+.carritovacio img{
+    width: 150px;
+    
+}
+
+.vacio{
+    text-align: center;
+ 
+}
+
+#anadir{
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    margin-top: 25px
+
+}

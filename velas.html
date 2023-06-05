@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="style.css" rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link href="styles.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Alkatra&family=Courgette&family=Inter:wght@300;400&family=Laila:wght@300&family=Playfair+Display&family=Playfair+Display+SC&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/797466c7fc.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+</head>
+<body>
+
+    <section class="open-car">
+        <section id="open-carrito">
+        <h1>Carrito de compras</h1>
+        <button id="cerrar" onclick="Cerrar()"> <i class="bi bi-x"></i></button>
+        <hr>
+    
+        <section class="container" >
+          <table class="table" >
+              <thead>
+                <tr>
+                  <th scope="col">#</th>
+                  <th scope="col">Item</th>
+                  <th scope="col">Cantidad</th>
+                  <th scope="col">Acción</th>
+                  <th scope="col">Total</th>
+                </tr>
+              </thead>
+              <tbody id="items-carrito"></tbody>
+              <tfoot>
+                <tr id="footer">
+                  <th scope="row" colspan="5">Su carrito actualmente está vacío.</th>
+                </tr>
+              </tfoot>
+            </table>
+         
+      </section>
+      
+      </section>
+      </section>
+
+      <section class="open-car">
+        <section id="open-favorito">
+          <div class="headerfav">
+        <h1>Favoritos</h1>
+        <button id="cerrar" onclick="Cerrar()"> <i class="bi bi-x"></i></button>
+      </div>
+        <hr>
+    
+        <section class="container" >
+            <table class="table" >
+                <thead>
+                  <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Item</th>
+                    <th scope="col">Precio</th>
+                  </tr>
+                </thead>
+                <tbody id="items-favorito"></tbody>
+                <tfoot>
+                  <tr id="footerFav">
+                    <th scope="row" colspan="5">No has agregado ningún objeto a favoritos.</th>
+                  </tr>
+                </tfoot>
+              </table>
+           
+        </section>
+        
+        </section>
+        </section>
+
+
+    <header>
+        <div class="barra-arriba"> 
+            <span>ENVÍOS GRATIS POR COMPRAS SUPERIORES A  $150.000 </span>
+        </div>
+    
+        <div class="barra-buscar">
+              <input type="text" class="barra-busqueda" placeholder="Buscar" >
+              <div class="btn">
+                <i class="fas fa-search icon" id="lupa"></i>
+              </div>
+          </div>
+    
+    
+        <div class="head-container-logo">
+            <img class="logo" src="img/Diseño sin título (13).png">
+        </div>
+    
+        <div class="head-container-iconos">
+            <a href="micuenta.html"> <img class="icons user" src="img/iconouser.png"></a>
+            <img class="icons carrito" src="img/iconocarrito.png" onclick="Carrito()">
+            <img class="icons corazon" src="img/iconocorazon.png" onclick="Favorito()">
+        </div>
+    
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="cuarzos.html">Cuarzos</a></li>
+                <li><a href="velas.html">Velas</a></li>
+                <li><a href="decoracion.html">Decoración</a></li>
+                <li><a href="accesorios.html">Accesorios</a></li>
+                <li><a href="paraelser.html">Para el ser</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<div class="trust">
+    <img src="img/Banner-Cuarzos-min_2048x.jpg">
+</div>
+<h2 class="cuarzos-piedras">CUARZOS Y PIEDRAS</h2>
+
+    <section class="row" id="cards"></section>
+
+    <template id="template-footer">
+        <th scope="row" colspan="2">Total productos</th>
+        <td>10</td>
+        <td>
+            <button class="btn btn-danger btn-sm eliminarcarrito" id="vaciar-carrito">
+                vaciar todo
+            </button>
+        </td>
+        <td class="font-weight-bold">$<span>5000</span></td>
+    </template>
+
+    <template id="template-footerFav">
+      <th scope="row" colspan="2">Total productos</th>
+      <td>
+          <button class="btn btn-danger btn-sm eliminarfav" id="vaciar-carrito">
+              eliminar de favoritos
+          </button>
+      </td>
+  </template>
+    
+    <template id="template-carrito">
+      <tr>
+        <th scope="row">id</th>
+        <td>Café</td>
+        <td>1</td>
+        <td>
+              <i class="bi bi-plus-circle"></i>
+              <i class="bi bi-dash-circle"></i>
+        </td>
+        <td>$ <span>500</span></td>
+      </tr>
+    </template>
+
+
+    <template id="template-card">
+        <section class="col-12 mb-2 col-md-4">
+          <section class="card">
+            <img src="" alt="" class="card-img-top">
+            <section class="card-body">
+              <h5>Titulo</h5>
+              <p>precio</p>
+              <img class="but bi bi-cart4" src="img/iconocarrito.png" onclick="Carrito()" id="anadir">
+              <img class="icons corazon bat" src="img/iconocorazon.png" id="fav" onclick="Favorito()">
+            </section>
+          </section>
+        </section>
+      </template>
+      
+      <template id="template-favorito">
+        <tr>
+          <th scope="row">id</th>
+          <td>Producto favorito</td>
+          <td>$ <span>$500</span></td>
+        </tr>
+      </template>
+
+</body>
+
+<footer>
+    <div class="logo-f logof">
+    <img src="img/Diseño sin título (13).png"></div>
+
+    <div class="newsletter-f">
+    <h3>NEWSLETTER</h3>
+    <input type="email" id="newsletter" name="name" placeholder="Recibe contenido exclusivo">
+    <input type="checkbox" id="terms-cond">
+    <span>Acepto las políticas de datos personales</span><br></div>
+
+    <div class="nosotros-f">
+        <ul style="list-style-type:none;">
+            <li id="nosotros"><a href="nosotros.html">Nosotros</a></li><br>
+            <li>Quienes somos</li>
+            <li>Nuestras tiendas</li>
+            <li>Contáctanos</li>
+        </ul></div>
+    
+        <div class="ayuda-f">
+        <ul style="list-style-type:none;">
+            <li id="ayuda"><a href="ayuda.html">Ayuda</a></li><br>
+            <li>Preguntas frecuentes</li>
+            <li>Políticas de privacidad</li>
+            <li>Términos y condiciones</li>
+            <li>Cambios y garantías</li>
+        </ul></div>
+    <div class="ubicacion">
+    <ul style="list-style-type:none;">
+        <li>Medellín, Colombia</li><br>
+        <li>servicioalcliente@celestialwonders.com</li><br>
+        <li>WhatsApp: 3007520241</li><br>
+        <li>Horarios de atención: Lunes a viernes 6:00am
+            8:0pm</li>
+    </ul>
+        </div>
+     
+        <script src="app.js"></script>
+</footer>
+</html>
